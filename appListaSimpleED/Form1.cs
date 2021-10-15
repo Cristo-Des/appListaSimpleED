@@ -129,10 +129,12 @@ namespace appListaSimpleED
             txtNumero.Clear();
             txtNombre.Clear();
             txtTelefono.Clear();
+           
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+           
             string nom = "DatosListaSimple";
             miLista.Cargar(nom);
             miLista.Mostrar(lstDatos);

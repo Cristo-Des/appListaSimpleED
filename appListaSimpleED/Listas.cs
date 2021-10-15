@@ -148,25 +148,22 @@ namespace appListaSimpleED
             {
                 return;
             }
-            nombreArchivo = "DatosListaSimple";
+           
             string path = @"D:\" + nombreArchivo + ".txt";
             using (StreamWriter sw = File.CreateText(path))
             {
                 do
                 {
-                    if (h==null)
-                    {
-                        return;
-                    }
+                   
                     sw.WriteLine(h.Numero + "-" + h.Nombre + "-" + h.Telefono);
                     h = h.Siguiente;
-                } while (h != head);
+                } while (h != null);
             }
             return;
         }
         public void Cargar(string nombreArchivo)
         {
-            nombreArchivo = "DatosListaSimple";
+           
             string[] lineas = File.ReadAllLines(@"D:\" + nombreArchivo + ".txt");
             foreach (string linea in lineas)
             {
